@@ -2,11 +2,12 @@
 
 namespace Hello_CircleCI
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static int Main(string[] args)
         {
             Console.WriteLine("Hello CircleCI! I greet you from Lagos Nigeria!");
+            return 0;
         }
     }
 }
