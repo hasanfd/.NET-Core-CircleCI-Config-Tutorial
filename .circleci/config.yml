@@ -8,12 +8,20 @@ jobs:
      - run:
          name: Restore packages
          command:
-           dotnet restore
+           dotnet restore "src/Hello CircleCI.csproj"
      - run:
          name: Build App
          command:
-           dotnet build
-     - run:
+           dotnet build "src/Hello CircleCI.csproj"
+    - run:
+         name: Restore Test packages
+         command:
+           dotnet restore "test/Hello CircleCITest.csproj"    
+    - run:
+         name: Build Test App
+         command:
+           dotnet build "test/Hello CircleCITest.csproj"
+    - run:
          name: Test App
          command:
-           dotnet test
+           dotnet test "test/Hello CircleCITest.csproj"
